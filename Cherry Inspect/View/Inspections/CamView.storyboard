@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cam View Controller-->
+        <scene sceneID="9WV-cq-Om2">
+            <objects>
+                <viewController storyboardIdentifier="camView" id="l4x-fg-ff6" customClass="CamViewController" customModule="Cherry_Inspect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3ya-yN-MPU"/>
+                        <viewControllerLayoutGuide type="bottom" id="KpH-ZJ-xON"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="REF-bC-TAM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qma-GB-xbi">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="barTintColor" red="0.2156862745" green="0.23529411759999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Photo" id="mhP-9R-SbG">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="1fK-1c-BtZ">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="cancelButton:" destination="l4x-fg-ff6" id="2Jm-v7-baX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo2" translatesAutoresizingMaskIntoConstraints="NO" id="WVX-vB-7W9">
+                                <rect key="frame" x="40" y="140" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="GWf-4y-LIz"/>
+                                    <constraint firstAttribute="width" constant="240" id="bic-zH-NBf"/>
+                                    <constraint firstAttribute="height" constant="128" id="pPt-YE-Rd7"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GWf-4y-LIz"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXg-fe-ss7">
+                                <rect key="frame" x="107" y="336" width="107" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Open Camera">
+                                    <color key="titleColor" red="0.84705883260000003" green="0.1215686277" blue="0.1647058874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openCameraButton:" destination="l4x-fg-ff6" eventType="touchUpInside" id="LMM-Fi-t2c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm6-RW-QFf">
+                                <rect key="frame" x="86" y="376" width="149" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Open Photo Library"/>
+                                <connections>
+                                    <action selector="openPhotoLibraryButton:" destination="l4x-fg-ff6" eventType="touchUpInside" id="s5S-WS-YLf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latest Image Selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAu-lT-6bN">
+                                <rect key="frame" x="90" y="537.5" width="140.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IpU-Jd-Ppb">
+                                <rect key="frame" x="120" y="449" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="K3f-9m-ybi"/>
+                                    <constraint firstAttribute="height" constant="80" id="Ssh-aW-hfZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2156862745" green="0.23529411759999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qma-GB-xbi" firstAttribute="width" secondItem="REF-bC-TAM" secondAttribute="width" id="4ni-lv-JTz"/>
+                            <constraint firstItem="KpH-ZJ-xON" firstAttribute="top" secondItem="xAu-lT-6bN" secondAttribute="bottom" constant="14" id="5B6-5S-1eI"/>
+                            <constraint firstItem="yXg-fe-ss7" firstAttribute="top" secondItem="WVX-vB-7W9" secondAttribute="bottom" constant="68" id="64b-KB-fgV"/>
+                            <constraint firstItem="WVX-vB-7W9" firstAttribute="centerX" secondItem="REF-bC-TAM" secondAttribute="centerX" id="6Cb-y9-elW"/>
+                            <constraint firstItem="sm6-RW-QFf" firstAttribute="top" secondItem="yXg-fe-ss7" secondAttribute="bottom" constant="8" id="76k-O1-R0e"/>
+                            <constraint firstItem="Qma-GB-xbi" firstAttribute="top" secondItem="3ya-yN-MPU" secondAttribute="bottom" id="95g-MS-ynU"/>
+                            <constraint firstItem="yXg-fe-ss7" firstAttribute="centerX" secondItem="WVX-vB-7W9" secondAttribute="centerX" id="DZ3-9c-FBU"/>
+                            <constraint firstItem="xAu-lT-6bN" firstAttribute="top" secondItem="IpU-Jd-Ppb" secondAttribute="bottom" constant="8.5" id="HcB-6O-DRm"/>
+                            <constraint firstItem="WVX-vB-7W9" firstAttribute="centerY" secondItem="REF-bC-TAM" secondAttribute="centerY" id="R0I-nI-lV5"/>
+                            <constraint firstItem="Qma-GB-xbi" firstAttribute="centerX" secondItem="REF-bC-TAM" secondAttribute="centerX" id="VrT-1e-1L6"/>
+                            <constraint firstItem="xAu-lT-6bN" firstAttribute="centerX" secondItem="REF-bC-TAM" secondAttribute="centerX" id="bH0-1A-XpD"/>
+                            <constraint firstItem="IpU-Jd-Ppb" firstAttribute="centerX" secondItem="xAu-lT-6bN" secondAttribute="centerX" id="gJN-9U-qAz"/>
+                            <constraint firstItem="WVX-vB-7W9" firstAttribute="top" secondItem="3ya-yN-MPU" secondAttribute="bottom" constant="103" id="q3a-EV-iwX"/>
+                            <constraint firstItem="WVX-vB-7W9" firstAttribute="centerY" secondItem="REF-bC-TAM" secondAttribute="centerY" constant="-80" id="r4g-5g-3uu"/>
+                            <constraint firstItem="sm6-RW-QFf" firstAttribute="centerX" secondItem="yXg-fe-ss7" secondAttribute="centerX" id="zE4-da-HGM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="R0I-nI-lV5"/>
+                                <exclude reference="q3a-EV-iwX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="imgLatestImage" destination="IpU-Jd-Ppb" id="8rW-iB-4ZT"/>
+                        <outlet property="lblInfo" destination="xAu-lT-6bN" id="CEa-Qp-VhC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1M-wE-pGl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111" y="341"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo2" width="128" height="128"/>
+    </resources>
+</document>

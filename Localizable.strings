@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Cherry Inspect
+
+  Created by Jefferson S. Batista on 07/04/17.
+  Copyright © 2017 Slate Development. All rights reserved.
+ 
+ fill the License Plate
+*/
+
+TITLE="Cherry Drive";
+TITLE_SUCCESSFULLY="Successfully Submitted";
+FILL_LICENSE_PLATE="Please, fill the License Plate Number and Issuing State field or the VIN field in Customer Info screen and complete the inspection.";
+INCOMPLETE_INSPECTION= "Incomplete Inspection.";
+SERVER_ERROR= "Please try again in a little while.";
+GENERIC_ERROR1= "An error occurred when saving the inspection, please contact the tech support and inform the error code.";
+VISIT_URL= "Visit www.cherryinspect.com to view your inspections.";
